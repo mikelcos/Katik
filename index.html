@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Ketik</title>
+    <link rel="shortcut icon" type="image/x-icon" href="Screenshot 2023-05-25 164934.png" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1 class="katik">KATIK</h1>
+        <h2 class="kaltik">Kalkulator Ketik</h2>
+    </header>
+
+    <section>
+        <!-- GREETING PARAGRAPH -->
+        <div class="greeting">
+            <h2 class="greeting-heading">Welcome to KATIK</h2><br>
+            <p class="pgreeting">Selamat datang di Katik !</p><br>
+            <p class="pgreeting">Katik atau Kalkulator Ketik adalah sebuah website untuk membantumu menghitung <Strong>Luas</Strong> dan <strong>Keliling</strong> Persegi dan Persegi Panjang</p>
+            <br><p class="pgreeting"><strong>Pilih Bangun Datar yang Akan Anda Hitung :</strong></p>
+        </div>
+        
+        <!-- NAVBAR -->
+        <nav>
+            <ul>
+                <li><a href="#persegi"><strong>Persegi</strong></a></li>
+                <li><a href="#persegipanjang"><strong>Persegi Panjang</strong></a></li>
+            </ul>
+        </nav>
+
+        <!-- PERSEGI -->
+        <div id="persegi">
+            <!-- LUAS PERSEGI -->
+            <head>
+                <h1 class="title-head">Luas Persegi</h1>
+            </head>
+            <img src="persegi.png" class="image" />
+            <p>Rumus luas persegi yaitu :</p>
+            <h3>L = S x S</h3><br>
+            <p>Dimana : <br>
+            L = Luas Persegi<br>
+            S = Panjang Sisi
+            <div>
+                <h2 class="hitung">Hitung Luas Persegi</h2><br>
+                <form>
+                    <label for="answer">Masukkan Panjang Sisi (cm):</label><br>
+                    <input type="number" id="sisi" name="hitung-luas" required><br><br>
+                    <input type="button" value="Hitung" id="button" onclick="hitungLuasPersegi()"></input>
+                  </form>
+                  <br><p><strong>Hasil : </strong></p><div id="hasilLuasPersegi"></div>
+            </div>
+
+            <br>
+            <div>
+                <!-- KELILING PERSEGI -->
+                <head class="title-head">
+                    <h1 class="title-head">Keliling Persegi</h1>
+                </head>
+                <img src="persegi.png" class="image" />
+                <p>Rumus keliling persegi yaitu :</p>
+                <h3>K = 4 x S</h3><br>
+                <p>Dimana : <br>
+                K = Keliling Persegi <br>
+                S = Panjang Sisi
+                <div>
+                    <h2 class="hitung">Hitung Keliling Persegi</h2><br>
+                    <form>
+                        <label for="answer">Masukkan Panjang Sisi (cm):</label><br>
+                        <input type="number" id="sisi2" name="hitung-keliling" required><br><br>
+                        <input type="button" value="Hitung" id="button" onclick="hitungKelilingPersegi()"></input>
+                      </form>
+                      <br><p><strong>Hasil : </strong></p><div id="hasilKelilingPersegi"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERSEGI PANJANG -->
+        <div id="persegipanjang">
+            <!-- LUAS PERSEGI PANJANG -->
+            <head>
+                <h1 class="title-head">Luas Persegi Panjang</h1>
+            </head>
+            <img src="persegipanjang.png" class="imagepp" />
+            <p>Rumus luas persegi panjang yaitu :</p>
+            <h3>L = P x L</h3><br>
+            <p>Dimana : <br>
+            L = Luas Persegi Panjang<br>
+            P = Panjang<br>
+            L = Lebar
+            <div>
+                <h2 class="hitung">Hitung Luas Persegi Panjang</h2><br>
+                <form>
+                    <label for="answer">Masukkan Panjang (cm):</label><br>
+                    <input type="number" id="panjang" name="hitung-luas" required><br>
+                    <label for="answer">Masukkan Lebar (cm):</label><br>
+                    <input type="number" id="lebar" name="hitung-luas" required><br><br>
+                    <input type="button" value="Hitung" id="button" onclick="hitungLuasPp()"></input>
+                  </form>
+                  <br><p>Hasil : </p><div id="hasilLuasPp"></div>
+            </div>
+
+            <br>
+            <div>
+                <!-- KELILING PERSEGI PANJANG -->
+                <head>
+                    <h1 class="title-head">Keliling Persegi Panjang</h1>
+                </head>
+                <img src="persegipanjang.png" class="imagepp" />
+                <p>Rumus keliling persegi panjang yaitu :</p>
+                <h3>K = 2 x (P + L)</h3><br>
+                <p>Dimana : <br>
+                    K = Keliling Persegi Panjang<br>
+                    P = Panjang<br>
+                    L = Lebar
+                <div>
+                    <h2 class="hitung">Hitung Keliling Persegi Panjang</h2><br>
+                    <form>
+                        <label for="answer">Masukkan Panjang (cm):</label><br>
+                        <input type="number" id="panjang2" name="hitung-keliling" required><br>
+                        <label for="answer">Masukkan Lebar (cm):</label><br>
+                        <input type="number" id="lebar2" name="hitung-keliling" required><br><br>
+                        <input type="button" value="Hitung" id="button" onclick="hitungKelilingPp()"></input>
+                      </form>
+                      <br><p>Hasil : </p><div id="hasilKelilingPp"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        &copy; 2023 Katik. All rights reserved.
+    </footer>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
